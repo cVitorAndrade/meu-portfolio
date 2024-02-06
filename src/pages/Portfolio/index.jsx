@@ -1,4 +1,4 @@
-import { Brand, Container, Header, Home, Nav, Presentation, ScroolDownButton } from "./styles";
+import { Brand, Container, Cover, Demonstration, Description, Header, Home, Info, Nav, Presentation, Project, ScroolDownButton, Status, ProjectTitle, VisiteApp, Title, SliderControls, PrevButton, NextButton } from "./styles";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
@@ -9,6 +9,17 @@ import { FiGithub } from "react-icons/fi";
 
 import { MdOutlineMouse } from "react-icons/md";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+
+import { MdOutlineCheckCircleOutline } from "react-icons/md";
+
+import { LuFigma } from "react-icons/lu";
+
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+import myUnsplash from "../../assets/my-unsplash.png";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import rocketAndPlanet from "../../assets/rocketandplanet.png";
 import astronaut from "../../assets/astronaut.png";
@@ -102,6 +113,253 @@ export function Portfolio () {
                     />
                 </a>
             </ScroolDownButton>
+
+            <Title>
+                Projects
+            </Title>
+
+            <Swiper
+                slidesPerView={1}
+                
+                navigation={{
+                    prevEl: "#prev-button",
+                    nextEl: "#next-button",
+                    clickable: true
+                }}
+
+                pagination={{
+                    el: "#pagination-element",
+                    clickable: true,
+                    dynamicBullets: true
+                }}
+            >
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>FINISHED</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">VER REPOSITÓRIO</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    Ver projeto ao vivo
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+
+            </Swiper>
+            
+            <SliderControls>
+                <PrevButton id="prev-button">
+                    <MdKeyboardArrowLeft
+                        size={25}
+                    />
+                </PrevButton>
+
+                <div id="pagination-element"></div>
+
+                <NextButton id="next-button">
+                    <MdOutlineKeyboardArrowRight
+                        size={25}
+                    />
+                </NextButton>
+
+            </SliderControls>
 
         </Container>
     )

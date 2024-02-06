@@ -1,6 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import { register } from "swiper/element/bundle"
+
+register();
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+
 import { ThemeProvider } from 'styled-components'
 import theme from './styles/theme'
 

@@ -171,7 +171,7 @@ export const Presentation = styled.div`
 export const ScroolDownButton = styled.div`
     width: 100%;
     
-    margin-top: 2rem;
+    margin-top: 5rem;
 
     display: flex;
     justify-content: center;
@@ -187,4 +187,216 @@ export const ScroolDownButton = styled.div`
         cursor: pointer;
     }
 
+`;
+
+export const Title = styled.h2`
+    width: 22rem;
+    margin: 20rem auto 2.8rem;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 900;
+    font-size: 4.8rem;
+
+    border-bottom: 2px solid ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+    text-align: center;
+`;
+
+export const Project = styled.div`
+    width: 100%;
+
+    display: flex;
+
+    > div {
+        flex: 1;
+    }
+
+    @media(max-width: 800px) {
+        flex-direction: column;
+    }
+
+`;
+
+export const Info = styled.div`
+    background: linear-gradient(to right, rgba(52, 98, 89, 0.65), #000000);
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+
+
+    > div {
+        width: min(90%, 60rem);
+    }
+
+    @media(max-width: 800px) {
+        text-align: center;
+        background: none;
+    }
+
+`;
+
+export const Status = styled.div`
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    > p {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding-left: 1rem;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+            width: 2px;
+            height: 2rem;
+
+            border-radius: .5rem;
+
+            position: absolute;
+
+            left: 0;
+        }
+    }
+`;
+
+export const ProjectTitle = styled.h2`
+    font-family: 'Roboto Slab', serif;
+
+    font-size: clamp(4rem, 6rem + 2vw, 10rem);
+    `;
+
+export const Description = styled.p`
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 3.2rem;
+
+`;
+
+export const VisiteApp = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    margin: 3.4rem 0;
+
+    > a {
+        padding: 1.5rem 5rem;
+
+        border-radius: 1.5rem;
+
+        text-transform: uppercase;
+
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+
+        color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+        background-color: ${ ({ theme }) => theme.COLORS.GREEN_900};
+
+        transition: filter .4s ease-in-out;
+
+        &:hover {
+            filter: brightness(1.3);
+        }
+
+    }
+
+    @media( max-width: 800px) {
+        justify-content: center;
+
+        > a {
+            padding: 1.5rem 3rem;
+        }
+        
+    }
+`;
+
+export const Demonstration = styled.a`
+    font-family: 'DM Sans', sans-serif;
+    
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+    text-decoration: underline;
+
+    cursor: pointer;
+
 `
+
+export const Cover = styled.div`
+    padding: 4rem 0;
+    border-radius: 1.5rem;
+    display: flex;
+
+
+    > img {
+        border-radius: inherit;
+        width: 100%;
+        flex: 1;
+    }
+`;
+
+export const SliderControls = styled.div`
+    width: 15rem;
+    margin: 4rem auto 0;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    #pagination-element {
+        transform: none;
+
+        .swiper-pagination-bullet {
+            background-color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+            
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+`;
+
+export const PrevButton = styled.button`
+    background: none;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+    
+    &:disabled {
+        filter: brightness(0.5);
+    }
+`;
+
+export const NextButton = styled.button`
+    background: none;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+    &:disabled {
+        filter: brightness(0.5);
+    }
+`;
