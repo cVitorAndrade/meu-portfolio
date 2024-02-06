@@ -1,5 +1,7 @@
 import { Brand, Container, Cover, Demonstration, Description, Header, Home, Info, Nav, Presentation, Project, ScroolDownButton, Status, ProjectTitle, VisiteApp, Title, SliderControls, PrevButton, NextButton } from "./styles";
 
+import { FlagSwitch } from "../../components/FlagSwitch";
+
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 import { FaWhatsapp } from "react-icons/fa6";
@@ -23,8 +25,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import rocketAndPlanet from "../../assets/rocketandplanet.png";
 import astronaut from "../../assets/astronaut.png";
+import { useTranslation } from "react-i18next";
 
 export function Portfolio () {
+    const [t] = useTranslation("global");
+
     return (
         <Container>
             <Header>
@@ -34,14 +39,16 @@ export function Portfolio () {
                     </h2>
                 </Brand>
                 <Nav>
-                    <a href="">Home</a>
-                    <a href="">Projects</a>
-                    <a href="">Tech</a>
-                    <a href="">Contact</a>
+                    <a href="">{t("Home")}</a>
+                    <a href="">{t("Projects")}</a>
+                    <a href="">{t("Tech")}</a>
+                    <a href="">{t("Contact")}</a>
 
                     <HiOutlineMenuAlt3 
                         size={30}
                     />
+
+                    <FlagSwitch />
                 </Nav>
             </Header>
 
@@ -55,7 +62,7 @@ export function Portfolio () {
 
                     <h1>CARLOS VITOR</h1>
 
-                    <p>Fullstack Software Engineer</p>
+                    <p>{t("Fullstack Software Engineer")}</p>
 
                     <a href="">Contact</a>
 
@@ -115,12 +122,12 @@ export function Portfolio () {
             </ScroolDownButton>
 
             <Title>
-                Projects
+                {t("Projects")}
             </Title>
 
             <Swiper
                 slidesPerView={1}
-                
+
                 navigation={{
                     prevEl: "#prev-button",
                     nextEl: "#next-button",
@@ -141,128 +148,23 @@ export function Portfolio () {
                                     <MdOutlineCheckCircleOutline
                                         size={24}
                                     />
-                                    <p>FINISHED</p>
+                                    <p>{t("FINISHED")}</p>
                                 </Status>
                                 <ProjectTitle>
                                     My Unsplash
                                 </ProjectTitle>
                                 <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
                                 </Description>
                                 <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
                                     <LuFigma
                                         size={30}
                                     />
                                 </VisiteApp>
 
                                 <Demonstration href="">
-                                    Ver projeto ao vivo
-                                </Demonstration>
-                            </div>
-                        </Info>
-
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>FINISHED</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
-
-                                <Demonstration href="">
-                                    Ver projeto ao vivo
-                                </Demonstration>
-                            </div>
-                        </Info>
-
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>FINISHED</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
-
-                                <Demonstration href="">
-                                    Ver projeto ao vivo
-                                </Demonstration>
-                            </div>
-                        </Info>
-
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>FINISHED</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
-
-                                <Demonstration href="">
-                                    Ver projeto ao vivo
+                                    {t("See project live")}
                                 </Demonstration>
                             </div>
                         </Info>
@@ -280,23 +182,23 @@ export function Portfolio () {
                                     <MdOutlineCheckCircleOutline
                                         size={24}
                                     />
-                                    <p>FINISHED</p>
+                                    <p>{t("FINISHED")}</p>
                                 </Status>
                                 <ProjectTitle>
                                     My Unsplash
                                 </ProjectTitle>
                                 <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
                                 </Description>
                                 <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
                                     <LuFigma
                                         size={30}
                                     />
                                 </VisiteApp>
 
                                 <Demonstration href="">
-                                    Ver projeto ao vivo
+                                    {t("See project live")}
                                 </Demonstration>
                             </div>
                         </Info>
@@ -306,7 +208,6 @@ export function Portfolio () {
                         </Cover>
                     </Project>
                 </SwiperSlide>
-
                 <SwiperSlide>
                     <Project>
                         <Info>
@@ -315,23 +216,159 @@ export function Portfolio () {
                                     <MdOutlineCheckCircleOutline
                                         size={24}
                                     />
-                                    <p>FINISHED</p>
+                                    <p>{t("FINISHED")}</p>
                                 </Status>
                                 <ProjectTitle>
                                     My Unsplash
                                 </ProjectTitle>
                                 <Description>
-                                    Um serviço para armazenar imagens, permitindo aos usuários gerenciar e armazenar conjuntos selecionados de imagens Unsplash.
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
                                 </Description>
                                 <VisiteApp>
-                                    <a href="">VER REPOSITÓRIO</a>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
                                     <LuFigma
                                         size={30}
                                     />
                                 </VisiteApp>
 
                                 <Demonstration href="">
-                                    Ver projeto ao vivo
+                                    {t("See project live")}
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>{t("FINISHED")}</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    {t("See project live")}
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>{t("FINISHED")}</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    {t("See project live")}
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>{t("FINISHED")}</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    {t("See project live")}
+                                </Demonstration>
+                            </div>
+                        </Info>
+
+                        <Cover>
+                            <img src={myUnsplash} alt="" />
+                        </Cover>
+                    </Project>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Project>
+                        <Info>
+                            <div>
+                                <Status>
+                                    <MdOutlineCheckCircleOutline
+                                        size={24}
+                                    />
+                                    <p>{t("FINISHED")}</p>
+                                </Status>
+                                <ProjectTitle>
+                                    My Unsplash
+                                </ProjectTitle>
+                                <Description>
+                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
+                                </Description>
+                                <VisiteApp>
+                                    <a href="">{t("SEE REPOSITORY")}</a>
+                                    <LuFigma
+                                        size={30}
+                                    />
+                                </VisiteApp>
+
+                                <Demonstration href="">
+                                    {t("See project live")}
                                 </Demonstration>
                             </div>
                         </Info>

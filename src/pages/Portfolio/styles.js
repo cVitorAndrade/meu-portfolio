@@ -32,6 +32,8 @@ export const Brand = styled.div`
 
 export const Nav = styled.nav`
     display: flex;
+    align-items: center;
+
     gap: 3rem;
 
     > a {
@@ -65,8 +67,9 @@ export const Nav = styled.nav`
         cursor: pointer;
     }
 
-    @media(max-width: 740px) {
-        > a {
+    @media(max-width: 830px) {
+        > a,
+        > div {
             display: none;
         }
 
