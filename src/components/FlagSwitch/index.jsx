@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Container } from "./styles";
 
 import { useTranslation } from "react-i18next";

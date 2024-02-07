@@ -547,3 +547,201 @@ export const CheckOthersRepositories = styled.a`
         font-size: 2rem;
     }
 `;
+
+export const Techs = styled.div`
+    display: flex;
+
+    margin-top: 17.5rem;
+
+    > div:last-child {
+        width: 100%;
+        flex: 1;
+
+        align-self: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 1100px) {
+
+        background: linear-gradient(to left, rgba(74, 25, 112, .25), #000000);
+        > div:last-child {
+            display: none;
+        }
+    }
+
+`;
+
+export const TechsInfo = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 9.5rem;
+
+    @media(max-width: 1430px) {
+        padding-left: 1rem;
+    }
+
+    @media(max-width: 740px) {
+        width: 90%;
+    }
+
+`;
+
+export const TechsHeader = styled.div`
+    font-family: 'Roboto Slab', serif;
+    max-width: 70rem;
+
+    > h3 {
+        font-weight: 900;
+        font-size: 3.6rem;
+    }
+
+    > h2 {
+        font-weight: 900;
+        font-size: 22.5rem;
+
+        line-height: 20rem;
+    }
+
+    > p {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    @media(max-width: 740px) {
+        width: 90%;
+
+        > h2 {
+            font-size: 16rem;
+        }
+    }
+
+    @media(max-width: 400px) {
+        > h2 {
+            font-size: 12rem;
+
+            line-height: 12rem;
+        }
+    }
+`;
+
+export const StackLIst = styled.ul`
+    display: flex;
+    flex-direction: column;
+
+    gap: 10rem;
+    max-width: 70rem;
+
+    @media(max-width: 740px) {
+        width: 90%;
+    }
+`;
+
+export const Stack = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.5rem;
+
+`;
+
+import tagBackground from "../../assets/tag.png"
+
+export const Tag = styled.div`
+    display: flex;
+
+    > h4 {
+        display: flex;
+        align-items: center;
+
+        color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+    
+        font-family: 'Inter', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+
+        background-color: ${ ({ theme }) => theme.COLORS.   WHITE_900};
+
+        height: 4rem;
+
+        padding-left: 2rem;
+        padding-right: .5rem;
+
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+
+            width: 2.8rem;
+            height: 4rem;
+
+            right: -2.6rem;
+
+            background-image: url(${ tagBackground });
+        }
+    }
+
+
+`;
+
+export const TechsList = styled.ul`
+    display: flex;
+
+    justify-content: space-between;
+    row-gap: 3.5rem;
+    flex-wrap: wrap;
+
+
+    @media(max-width: 610px) {
+        justify-content: center;
+    }
+
+`;
+
+export const TechItem = styled.li`
+    display: flex;
+
+    align-items: center;
+
+    max-width: 28rem;
+    justify-content: space-between;
+
+
+    font-family: 'Roboto Serif', serif;
+
+    > h4 {
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+
+        gap: 1.3rem;
+
+        font-size: 2.8rem;
+        font-weight: 700;
+
+        span {
+            font-size: 2.2rem;
+            font-weight: 400;
+        }
+    }
+
+    @media(max-width: 610px) {
+        max-width: 100%;
+        gap: 2.5rem;
+    }
+
+    @media(max-width: 350px) {
+        flex-direction: column;
+
+        > h4 {
+            text-align: center;
+        }
+    }
+
+`;
