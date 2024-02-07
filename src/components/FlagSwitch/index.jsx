@@ -19,7 +19,7 @@ export function FlagSwitch () {
     useEffect(() => {
         const selectedLanguage = isChecked ? "pt" : "en"
         i18n.changeLanguage(selectedLanguage)
-    })
+    }, []);
 
     return (
         <Container

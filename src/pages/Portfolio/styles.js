@@ -67,14 +67,21 @@ export const Nav = styled.nav`
         cursor: pointer;
     }
 
-    @media(max-width: 830px) {
-        > a,
-        > div {
+    @media(max-width: 900px) {
+        gap: 4rem;
+
+        > a {
             display: none;
         }
 
         > svg {
             display: block;
+        }
+    }
+
+    @media(max-width: 400px) {
+        > div {
+            display: none;
         }
     }
 `;
@@ -349,7 +356,7 @@ export const Cover = styled.div`
 
 export const SliderControls = styled.div`
     width: 15rem;
-    margin: 4rem auto 0;
+    margin: 4rem auto 7rem;
     padding: 1rem 0;
 
     display: flex;
@@ -401,5 +408,142 @@ export const NextButton = styled.button`
 
     &:disabled {
         filter: brightness(0.5);
+    }
+`;
+
+export const TechnologiesUsed = styled.div`
+    width: 100%;    
+
+    > p {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        text-align: center;
+
+        margin-bottom: 2.5rem;
+    }
+
+    @media(max-width: 1000px) {
+        > p {
+            margin-bottom: 6rem;
+        }
+    }
+    
+`;
+
+export const PlatformList = styled.ul`
+    display: flex;
+    justify-content: space-evenly;
+
+    @media(max-width: 1000px) {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 7.5rem;
+        align-items: center;
+    }
+`;
+
+export const Platform = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+    gap: 1.5rem;
+
+    max-width: 32rem;
+    min-width: min(80%, 30rem);
+
+    > a {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        
+        color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+        font-family: 'Inter', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 600;
+
+    }
+
+    > p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.4rem;
+
+        align-self: flex-start;
+    }
+
+    @media(max-width: 1000px)  {
+        justify-content: center;
+
+        > p {
+            align-self: center;
+        }
+    }
+`;
+
+export const TechnologiesList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    
+    list-style: disc;
+
+    @media(max-width: 1000px)  {
+        list-style: none;
+        align-items: center;
+    }
+
+    @media(max-width: 670px) {
+        list-style: disc;
+        align-items: self-start;
+    }
+
+    @media(max-width: 350px) {
+        list-style: none;
+        align-items: center;
+    }
+
+`;
+
+export const Technology = styled.li`
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4rem;
+`;
+
+export const CheckOthersRepositories = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.3rem;
+    
+    background-color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+    max-width: min(90%, 42.7rem);
+
+    padding: 1.5rem 0;
+    margin: 7rem auto 0;
+
+
+    border-radius: 1rem;
+
+    color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+
+    transition: filter .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(0.7);
+    }
+
+    @media(max-width: 350px) {
+        font-size: 2rem;
     }
 `;
