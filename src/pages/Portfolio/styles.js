@@ -564,7 +564,7 @@ export const Techs = styled.div`
         }
     }
 
-    @media(max-width: 1100px) {
+    @media(max-width: 1140px) {
 
         background: linear-gradient(to left, rgba(74, 25, 112, .25), #000000);
         > div:last-child {
@@ -698,7 +698,7 @@ export const TechsList = styled.ul`
     flex-wrap: wrap;
 
 
-    @media(max-width: 610px) {
+    @media(max-width: 630px) {
         justify-content: center;
     }
 
@@ -712,6 +712,7 @@ export const TechItem = styled.li`
     max-width: 28rem;
     justify-content: space-between;
 
+    gap: 1.5rem;
 
     font-family: 'Roboto Serif', serif;
 
@@ -744,4 +745,108 @@ export const TechItem = styled.li`
         }
     }
 
+`;
+
+export const Contact = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 4.7rem;
+
+    width: 100%;
+
+    z-index: 1;
+    text-align: center;
+
+    align-items: center;
+
+    margin-top: 10rem;
+    position: relative;
+
+    padding-bottom: 30.5rem;
+
+
+    
+    > h2 {
+        font-size: clamp(2rem, 2rem + 1vw, 4.8rem);
+        font-family: 'Organic Relief', sans-serif;
+        max-width: 106rem;
+
+        color: white;
+    }
+
+    .planet,
+    .rocket {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .planet {
+        right: 0;
+        bottom: 0;
+    }
+
+    .rocket {
+        left: 0;
+        bottom: 0;
+        
+    }
+
+    @media(max-width: 1900px) {
+        .planet {
+            display: none;
+        }
+    }
+
+    @media(max-width: 1100px) {
+        .planet {
+            display: none;
+        }
+
+        overflow: hidden;
+    }
+`;
+
+export const Input = styled.div`
+    width: min(90%, 110rem);
+
+    display: flex;
+
+    background-color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+    border-radius: 2.5rem;
+    border: 1px solid ${ ({ theme }) => theme.COLORS.BLACK_900};
+
+    padding: 1rem 2.1rem 1rem 2.7rem;
+
+    > input {
+        width: 100%;
+        padding: rem 0;
+
+        border: none;
+        background: none;
+        outline: none;
+
+    }
+    
+    > input,
+    input::placeholder {
+        font-family: 'Roboto Serif', serif;
+        font-size: 1.4rem;
+        color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+    }
+
+    > button {
+        background-color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+
+        padding: .7rem 2.5rem;
+
+        font-family: 'Roboto Serif', serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+        border-radius: 2.5rem;
+        border: none;
+    }
 `;

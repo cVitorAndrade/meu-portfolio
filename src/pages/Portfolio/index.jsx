@@ -31,7 +31,9 @@ import {
     TechsList,
     TechItem,
     StackLIst,
-    Tag
+    Tag,
+    Contact,
+    Input
 } from "./styles";
 
 import { FlagSwitch } from "../../components/FlagSwitch";
@@ -83,6 +85,9 @@ import prisma from "../../assets/techs/prisma.png";
 
 import jest from "../../assets/techs/jest.png";
 import socketIO from "../../assets/techs/socket-io.png";
+
+import planet from "../../assets/planet.png";
+import rocket from "../../assets/rocket1.png";
 
 import { useTranslation } from "react-i18next";
 
@@ -938,6 +943,24 @@ export function Portfolio () {
                 </div>
 
             </Techs>
+
+            <Contact>
+                <h2>{t("WANT TO HAVE AN AWESOME PROJECT DONE?")}</h2>
+                <div className="planet">
+                    <img src={planet} alt="" />
+                </div>
+                <div className="rocket">
+                    <img src={rocket} alt="" />
+                </div>
+
+                <Input>
+                    <input type="text" placeholder={t("Enter your email")}/>
+
+                    <button>
+                        {t("Contact")}
+                    </button>
+                </Input>
+            </Contact>
 
 
         </Container>
