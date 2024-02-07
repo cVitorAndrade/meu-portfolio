@@ -5,7 +5,11 @@ import { useTranslation } from "react-i18next";
 
 export function FlagSwitch () {
     const { i18n } = useTranslation("global");
-    const [isChecked, setIsChecked] = useState(localStorage.getItem("@portfolio-cvitor:isChecked") === 'true');
+
+    const ptIsSelected = localStorage.getItem("@portfolio-cvitor:isChecked") === 'true';
+    const defaultValue = localStorage.getItem("@portfolio-cvitor:isChecked") === null;
+
+    const [isChecked, setIsChecked] = useState(ptIsSelected || defaultValue ? true : false);
 
     function toggleLanguage () {
         const selectedLanguage = !isChecked ? "pt" : "en"
@@ -15,11 +19,6 @@ export function FlagSwitch () {
         
         setIsChecked(prev => !prev);
     }
-
-    useEffect(() => {
-        const selectedLanguage = isChecked ? "pt" : "en"
-        i18n.changeLanguage(selectedLanguage)
-    }, []);
 
     return (
         <Container
