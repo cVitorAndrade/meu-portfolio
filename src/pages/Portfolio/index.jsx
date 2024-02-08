@@ -90,9 +90,48 @@ import planet from "../../assets/planet.png";
 import rocket from "../../assets/rocket1.png";
 
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+import emailjs from "@emailjs/browser";
 
 export function Portfolio () {
     const [t] = useTranslation("global");
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    function sendEmail (e) {
+        e.preventDefault();
+
+        if ( !name.trim() || !email.trim() || !message.trim() ) {
+            alert(t("All fields must be filled in"));
+            return;
+        }
+
+        const templateParams = {
+            from_name: name,
+            email,
+            message
+        }
+
+        emailjs.send("service_hhvobqn", "template_9jnt4yk", templateParams, "nvBRhKqV24j_idxLa")
+        .then(() => {
+            alert(t("Email sent successfully, I will contact you soon"));
+            clearInputs();
+
+        })
+        .catch(error => {
+            alert(t("Error sending email"));
+            console.log(error);
+        })
+    }
+
+    function clearInputs () {
+        setEmail("");
+        setName("");
+        setMessage("");
+    }
 
     return (
         <Container>
@@ -954,16 +993,32 @@ export function Portfolio () {
                 </div>
 
 
-                <form>
+                <form
+                    onSubmit={sendEmail}
+                >
                     <Input>
-                        <input type="text" placeholder={t("Enter your email")}/>
+                        <input
+                            type="email" 
+                            placeholder={t("Enter your email")}
+                            onChange={ e => setEmail(e.target.value) }
+                            value={email}
+                        />
                     </Input>
 
                     <Input>
-                        <input type="text" placeholder={t("Enter your name")}/>
+                        <input 
+                            type="text" 
+                            placeholder={t("Enter your name")}
+                            onChange={ e => setName(e.target.value) }
+                            value={name}
+                        />
                     </Input>
 
-                    <textarea placeholder={t("Type a message!")}>
+                    <textarea 
+                        placeholder={t("Type a message!")}
+                        onChange={ e => setMessage(e.target.value) }
+                        value={message}
+                    >
                     </textarea>
 
                     <button>

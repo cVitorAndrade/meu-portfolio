@@ -33,5 +33,11 @@
 
     "Enter your name": "Informe seu nome",
 
-    "Type a message!": "Digite uma mensagem!"
+    "Type a message!": "Digite uma mensagem!",
+
+    "All fields must be filled in": "Todos os campos devem ser preenchidos",
+
+    "Email sent successfully, I will contact you soon": "E-mail enviado com sucesso, entrarei em contato em breve",
+
+    "Error sending email": "Erro ao enviar e-mail"
 }
