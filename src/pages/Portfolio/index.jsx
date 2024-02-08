@@ -91,6 +91,8 @@ import rocket from "../../assets/rocket1.png";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
+import { projects } from "../../utils/data";
+
 import emailjs from "@emailjs/browser";
 
 export function Portfolio () {
@@ -249,145 +251,75 @@ export function Portfolio () {
                     dynamicBullets: true
                 }}
             >
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>{t("FINISHED")}</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">{t("SEE REPOSITORY")}</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
 
-                                <Demonstration href="">
-                                    {t("See project live")}
-                                </Demonstration>
-                            </div>
-                        </Info>
+                {
+                    projects && 
+                    projects.map( project => (
+                        <SwiperSlide key={project.id}>
+                            <Project>
+                                <Info>
+                                    <div>
+                                        <Status>
+                                            <MdOutlineCheckCircleOutline
+                                                size={24}
+                                            />
+                                            <p>{t("FINISHED")}</p>
+                                        </Status>
 
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
+                                        <ProjectTitle>
+                                            {project.name}
+                                        </ProjectTitle>
 
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>{t("FINISHED")}</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">{t("SEE REPOSITORY")}</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
+                                        <Description>
+                                            {t(project.description)}
+                                        </Description>
+                                        <VisiteApp>
+                                            <a 
+                                                href={project.repository}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                {t("SEE REPOSITORY")}
+                                            </a>
 
-                                <Demonstration href="">
-                                    {t("See project live")}
-                                </Demonstration>
-                            </div>
-                        </Info>
+                                            {
+                                                project.design &&
+                                                <a
+                                                    href={project.design}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <LuFigma
+                                                        size={30}
+                                                    />
+                                                </a>
+                                            }
+                                        </VisiteApp>
 
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
+                                        {
+                                            project.deploy &&
 
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>{t("FINISHED")}</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">{t("SEE REPOSITORY")}</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
+                                            <Demonstration
+                                                href={project.deploy}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                {t("See project live")}
+                                            </Demonstration>
+                                        }
 
-                                <Demonstration href="">
-                                    {t("See project live")}
-                                </Demonstration>
-                            </div>
-                        </Info>
+                                    </div>
 
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
+                                </Info>
 
-                <SwiperSlide>
-                    <Project>
-                        <Info>
-                            <div>
-                                <Status>
-                                    <MdOutlineCheckCircleOutline
-                                        size={24}
-                                    />
-                                    <p>{t("FINISHED")}</p>
-                                </Status>
-                                <ProjectTitle>
-                                    My Unsplash
-                                </ProjectTitle>
-                                <Description>
-                                    {t("An image storage service, allowing users to manage and store selected sets of Unsplash images.")}
-                                </Description>
-                                <VisiteApp>
-                                    <a href="">{t("SEE REPOSITORY")}</a>
-                                    <LuFigma
-                                        size={30}
-                                    />
-                                </VisiteApp>
+                                <Cover>
+                                    <img src={project.image} alt="" />
+                                </Cover>
+                            </Project>
 
-                                <Demonstration href="">
-                                    {t("See project live")}
-                                </Demonstration>
-                            </div>
-                        </Info>
-
-                        <Cover>
-                            <img src={myUnsplash} alt="" />
-                        </Cover>
-                    </Project>
-                </SwiperSlide>
+                        </SwiperSlide>
+                    ))
+                }
 
             </Swiper>
             
@@ -416,362 +348,54 @@ export function Portfolio () {
                     prevEl: "#prev-button",
                     nextEl: "#next-button"
                 }}
-            >
-                <SwiperSlide>
-                    <TechnologiesUsed>
-                        <p>{t("Technologies used to build the application services:")}</p>
-                        
-                        <PlatformList>
-                            <Platform>
-                                <a href="">
-                                    Website
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        HTML
-                                    </Technology>
-                                    <Technology>
-                                        CSS
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        NextJs
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    API
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        Express
-                                    </Technology>
-                                    <Technology>
-                                        Prisma
-                                    </Technology>
-                                    <Technology>
-                                        PostgreSQL
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Node.js
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    Mobile APP
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        React Native
-                                    </Technology>
-                                    <Technology>
-                                        Expo
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
+            >                
 
-                                <p>And other +30 libraries</p>
-                            </Platform>
-                        </PlatformList>
-                    </TechnologiesUsed>
-                </SwiperSlide>
+                {
+                    projects && 
+                    projects.map( project => (
+                        <SwiperSlide
+                            key={project.id}
+                        >
+                        <TechnologiesUsed>
+                            <p>{t("Technologies used to build the application services:")}</p>
+                            <PlatformList>
+                                {
+                                    project.platforms &&
+                                    project.platforms.map( platform => (
+                                        <Platform
+                                            key={platform.id}
+                                        >
+                                            <a
+                                                href={platform.repository}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                {platform.name}
+                                                <RiShareBoxLine
+                                                    size={15}
+                                                />
+                                            </a>
+                                            <TechnologiesList>
+                                                {
+                                                    platform.technologies &&
+                                                    platform.technologies.map( technology => (
+                                                        <Technology
+                                                            key={technology.id}
+                                                        >
+                                                            {technology.name}
+                                                        </Technology>
+                                                    ))
+                                                }
+                                            </TechnologiesList>
+                                        </Platform>
+                                    ))
+                                }
+                            </PlatformList>
+                        </TechnologiesUsed>
 
-                <SwiperSlide>
-                    <TechnologiesUsed>
-                        <p>Technologies used to build the application services:</p>
-                        
-                        <PlatformList>
-                            <Platform>
-                                <a href="">
-                                    Website
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        HTML
-                                    </Technology>
-                                    <Technology>
-                                        CSS
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        NextJs
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    API
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        Express
-                                    </Technology>
-                                    <Technology>
-                                        Prisma
-                                    </Technology>
-                                    <Technology>
-                                        PostgreSQL
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Node.js
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    Mobile APP
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        React Native
-                                    </Technology>
-                                    <Technology>
-                                        Expo
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-
-                                <p>And other +30 libraries</p>
-                            </Platform>
-                        </PlatformList>
-                    </TechnologiesUsed>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <TechnologiesUsed>
-                        <p>Technologies used to build the application services:</p>
-                        
-                        <PlatformList>
-                            <Platform>
-                                <a href="">
-                                    Website
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        HTML
-                                    </Technology>
-                                    <Technology>
-                                        CSS
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        NextJs
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    API
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        Express
-                                    </Technology>
-                                    <Technology>
-                                        Prisma
-                                    </Technology>
-                                    <Technology>
-                                        PostgreSQL
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Node.js
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    Mobile APP
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        React Native
-                                    </Technology>
-                                    <Technology>
-                                        Expo
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-
-                                <p>And other +30 libraries</p>
-                            </Platform>
-                        </PlatformList>
-                    </TechnologiesUsed>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <TechnologiesUsed>
-                        <p>Technologies used to build the application services:</p>
-                        
-                        <PlatformList>
-                            <Platform>
-                                <a href="">
-                                    Website
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        HTML
-                                    </Technology>
-                                    <Technology>
-                                        CSS
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        NextJs
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    API
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        Express
-                                    </Technology>
-                                    <Technology>
-                                        Prisma
-                                    </Technology>
-                                    <Technology>
-                                        PostgreSQL
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Node.js
-                                    </Technology>
-                                </TechnologiesList>
-                            </Platform>
-                            <Platform>
-                                <a href="">
-                                    Mobile APP
-                                    <RiShareBoxLine
-                                        size={15}
-                                    />
-                                </a>
-                                <TechnologiesList>
-                                    <Technology>
-                                        React Native
-                                    </Technology>
-                                    <Technology>
-                                        Expo
-                                    </Technology>
-                                    <Technology>
-                                        React
-                                    </Technology>
-                                    <Technology>
-                                        Javascript (w/ Typescript)
-                                    </Technology>
-                                    <Technology>
-                                        Axios
-                                    </Technology>
-                                </TechnologiesList>
-
-                                <p>And other +30 libraries</p>
-                            </Platform>
-                        </PlatformList>
-                    </TechnologiesUsed>
-                </SwiperSlide>
+                        </SwiperSlide>
+                    ))
+                }
 
             </Swiper>
 

@@ -14,7 +14,7 @@
 
     "See project live": "Ver projeto ao vivo",
 
-    "Technologies used to build the application services:": "Tecnologias usadas para construir os serviços de aplicação:",
+    "Technologies used to build the application services:": "Tecnologias usadas para construir os serviços da aplicação:",
 
     "Check other repositories": "Ver outros repositórios",
 
@@ -41,5 +41,9 @@
 
     "Error sending email": "Erro ao enviar e-mail",
 
-    "Developed by Carlos Vitor": "Desenvolvido por Carlos Vitor"
+    "Developed by Carlos Vitor": "Desenvolvido por Carlos Vitor",
+
+    "Everyone sends and receives text messages every day, this system consists of a chat application using sockets for real-time communication.": "Todos enviam e recebem mensagens de textos todos os dias. Esse sistema consiste em um aplicativo de chat usando sockets para uma comunicação em tempo real",
+
+    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "Esse desafio envolveu a criação de um aplicativo fullsatck de gerenciamento de de tarefas. Um sistema que permite aos usúarios gerenciar tarefas e compartilhar seu board, entre outras atividades."
 }

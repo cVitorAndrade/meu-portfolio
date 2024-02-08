@@ -41,5 +41,9 @@
 
     "Error sending email": "Error sending email",
 
-    "Developed by Carlos Vitor": "Developed by Carlos Vitor"
+    "Developed by Carlos Vitor": "Developed by Carlos Vitor",
+
+    "Everyone sends and receives text messages every day, this system consists of a chat application using sockets for real-time communication.": "Everyone sends and receives text messages every day. This system consists of a chat application using sockets for real-time communication.",
+
+    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities."
 }

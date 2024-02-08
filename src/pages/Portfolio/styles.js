@@ -358,7 +358,7 @@ export const VisiteApp = styled.div`
 
     margin: 3.4rem 0;
 
-    > a {
+    > a:first-child{
         padding: 1.5rem 5rem;
 
         border-radius: 1.5rem;
@@ -378,7 +378,10 @@ export const VisiteApp = styled.div`
         &:hover {
             filter: brightness(1.3);
         }
+    }
 
+    > a:last-child {
+        color: ${ ({ theme }) => theme.COLORS.WHITE_900};
     }
 
     @media( max-width: 800px) {
