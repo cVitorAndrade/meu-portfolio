@@ -22,22 +22,7 @@ export const Header = styled.header`
     font-family: 'Roboto Serif', serif;
 
     ul {
-        display: flex;
-        gap: 2.5rem;
-
         display: none;
-
-        li {
-            transition: transform .2s ease-in-out;
-
-            &:hover {
-                transform: translateY(-1rem);
-            }
-        }
-
-        svg {
-            color: ${ ({ theme }) => theme.COLORS.WHITE_900};
-        }
     }
 
     &.opened {
@@ -243,23 +228,6 @@ export const Presentation = styled.div`
             border: 1px solid ${ ({ theme }) => theme.COLORS.WHITE_900};
         }
     }
-
-    ul {
-        display: flex;
-        gap: 2.5rem;
-
-        li {
-            transition: transform .2s ease-in-out;
-
-            &:hover {
-                transform: translateY(-1rem);
-            }
-        }
-
-        svg {
-            color: ${ ({ theme }) => theme.COLORS.WHITE_900};
-        }
-    }
 `;
 
 export const ScroolDownButton = styled.div`
@@ -374,7 +342,7 @@ export const ProjectTitle = styled.h2`
     font-family: 'Roboto Slab', serif;
 
     font-size: clamp(4rem, 6rem + 2vw, 10rem);
-    `;
+`;
 
 export const Description = styled.p`
     font-family: 'Roboto Slab', serif;
@@ -991,23 +959,6 @@ export const Footer = styled.footer`
     > p {
         font-family: 'Roboto Slab', serif;
         font-size: 1.6rem;
-    }
-
-    > ul {
-        display: flex;
-        gap: 2.5rem;
-
-        li {
-            transition: transform .2s ease-in-out;
-
-            &:hover {
-                transform: translateY(-1rem);
-            }
-        }
-
-        svg {
-            color: ${ ({ theme }) => theme.COLORS.WHITE_900};
-        }
     }
 
     @media(max-width: 500px) {

@@ -38,15 +38,11 @@ import {
 } from "./styles";
 
 import { FlagSwitch } from "../../components/FlagSwitch";
+import { SocialMedias } from "../../components/SocialMedias";
 
 import { IoClose } from "react-icons/io5";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
-import { FaWhatsapp } from "react-icons/fa6";
-import { MdMailOutline } from "react-icons/md";
-import { FaInstagram } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
 
 import { MdOutlineMouse } from "react-icons/md";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
@@ -154,10 +150,34 @@ export function Portfolio () {
                     
                 </Brand>
                 <Nav>
-                    <a href="">{t("Home")}</a>
-                    <a href="">{t("Projects")}</a>
-                    <a href="">{t("Tech")}</a>
-                    <a href="">{t("Contact")}</a>
+
+                    <a 
+                        href="#home"
+                        onClick={() => setSidebarIsOpened(false) }
+                    >
+                        {t("Home")}
+                    </a>
+
+                    <a 
+                        href="#projects"
+                        onClick={() => setSidebarIsOpened(false) }
+                    >
+                        {t("Projects")}
+                    </a>
+
+                    <a 
+                        href="#tech"
+                        onClick={() => setSidebarIsOpened(false) }
+                    >
+                        {t("Tech")}
+                    </a>
+
+                    <a 
+                        href="#contact"
+                        onClick={() => setSidebarIsOpened(false) }
+                    >
+                        {t("Contact")}
+                    </a>
                     
                     <FlagSwitch />
 
@@ -168,40 +188,7 @@ export function Portfolio () {
 
                 </Nav>
 
-                <ul>
-                    <li>
-                        <a href="">
-                            <FaWhatsapp 
-                                size={24}
-                            />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <MdMailOutline 
-                                size={24}
-                            />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <FaInstagram 
-                                size={24}
-                            />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            <FiGithub 
-                                size={24}
-                            />
-                        </a>
-                    </li>
-
-                </ul>
+                <SocialMedias />
 
 
             </Header>
@@ -211,49 +198,16 @@ export function Portfolio () {
                     <img src={rocketAndPlanet} alt="" />
                 </div>
 
-                <Presentation>
+                <Presentation id="home">
                     <h3>HI, I`M</h3>
 
                     <h1>CARLOS VITOR</h1>
 
                     <p>{t("Fullstack Software Engineer")}</p>
 
-                    <a href="">{t("Contact")}</a>
+                    <a href="#contact">{t("Contact")}</a>
 
-                    <ul>
-                        <li>
-                            <a href="">
-                                <FaWhatsapp 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <MdMailOutline 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <FaInstagram 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <FiGithub 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                    </ul>
+                    <SocialMedias />
 
                 </Presentation>
 
@@ -275,7 +229,7 @@ export function Portfolio () {
                 </a>
             </ScroolDownButton>
 
-            <Title>
+            <Title id="projects">
                 {t("Projects")}
             </Title>
 
@@ -831,7 +785,7 @@ export function Portfolio () {
                 {t("Check other repositories")}
             </CheckOthersRepositories>
 
-            <Techs>
+            <Techs id="tech">
                 <TechsInfo>
                     <TechsHeader>
                         <h3>{t("and finally,")}</h3>
@@ -1033,7 +987,7 @@ export function Portfolio () {
 
             </Techs>
 
-            <Contact>
+            <Contact id="contact">
                 <h2>{t("WANT TO HAVE AN AWESOME PROJECT DONE?")}</h2>
                 <div className="planet">
                     <img src={planet} alt="" />
@@ -1081,40 +1035,7 @@ export function Portfolio () {
             <Footer>
                 <p>{t("Developed by Carlos Vitor")}</p>
 
-                <ul>
-                        <li>
-                            <a href="">
-                                <FaWhatsapp 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <MdMailOutline 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <FaInstagram 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                <FiGithub 
-                                    size={24}
-                                />
-                            </a>
-                        </li>
-
-                </ul>
+                <SocialMedias />
 
             </Footer>
 
