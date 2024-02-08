@@ -33,7 +33,8 @@ import {
     StackLIst,
     Tag,
     Contact,
-    Input
+    Input,
+    Footer
 } from "./styles";
 
 import { FlagSwitch } from "../../components/FlagSwitch";
@@ -1027,6 +1028,46 @@ export function Portfolio () {
                     
                 </form>
             </Contact>
+
+            <Footer>
+                <p>{t("Developed by Carlos Vitor")}</p>
+
+                <ul>
+                        <li>
+                            <a href="">
+                                <FaWhatsapp 
+                                    size={24}
+                                />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <MdMailOutline 
+                                    size={24}
+                                />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <FaInstagram 
+                                    size={24}
+                                />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <FiGithub 
+                                    size={24}
+                                />
+                            </a>
+                        </li>
+
+                </ul>
+
+            </Footer>
 
 
         </Container>

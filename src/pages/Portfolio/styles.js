@@ -867,7 +867,6 @@ export const Contact = styled.div`
     }
 `;
 
-
 export const Input = styled.div`
 
     display: flex;
@@ -894,5 +893,41 @@ export const Input = styled.div`
         font-family: 'Roboto Serif', serif;
         font-size: 1.4rem;
         color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+    }
+`;
+
+export const Footer = styled.footer`
+    width: min(90%, 160rem);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+    align-items: center;
+
+    > p {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.6rem;
+    }
+
+    > ul {
+        display: flex;
+        gap: 2.5rem;
+
+        li {
+            transition: transform .2s ease-in-out;
+
+            &:hover {
+                transform: translateY(-1rem);
+            }
+        }
+
+        svg {
+            color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+        }
+    }
+
+    @media(max-width: 500px) {
+        flex-direction: column-reverse;
+        gap: 3rem;
     }
 `;
