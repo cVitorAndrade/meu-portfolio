@@ -953,13 +953,24 @@ export function Portfolio () {
                     <img src={rocket} alt="" />
                 </div>
 
-                <Input>
-                    <input type="text" placeholder={t("Enter your email")}/>
+
+                <form>
+                    <Input>
+                        <input type="text" placeholder={t("Enter your email")}/>
+                    </Input>
+
+                    <Input>
+                        <input type="text" placeholder={t("Enter your name")}/>
+                    </Input>
+
+                    <textarea placeholder={t("Type a message!")}>
+                    </textarea>
 
                     <button>
                         {t("Contact")}
                     </button>
-                </Input>
+                    
+                </form>
             </Contact>
 
 

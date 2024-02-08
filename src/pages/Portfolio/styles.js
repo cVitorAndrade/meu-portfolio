@@ -195,6 +195,18 @@ export const ScroolDownButton = styled.div`
         color: ${ ({ theme }) => theme.COLORS.WHITE_900};
 
         cursor: pointer;
+
+        animation: mouseDown 2s infinite;
+    }
+
+    @keyframes mouseDown {
+        from {
+            transform: translateY(-10px);
+        }
+
+        to {
+            transform: translateY(30px);
+        }
     }
 
 `;
@@ -762,9 +774,7 @@ export const Contact = styled.div`
     margin-top: 10rem;
     position: relative;
 
-    padding-bottom: 30.5rem;
-
-
+    padding-bottom: 35rem;
     
     > h2 {
         font-size: clamp(2rem, 2rem + 1vw, 4.8rem);
@@ -772,6 +782,57 @@ export const Contact = styled.div`
         max-width: 106rem;
 
         color: white;
+    }
+
+    > form {
+        width: min(90%, 110rem);
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        textarea,
+        textarea::placeholder {
+            
+            font-family: 'Roboto Serif', serif;
+            font-size: 1.4rem;
+            color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+        }
+        
+        textarea {
+            height: 20rem;
+            border-radius: 2.5rem;
+            resize: none;
+
+            padding: 2rem 2.7rem;
+            outline: none;
+        }
+
+        button {
+            width: 17rem;
+            padding: 1.5rem 0;
+            border-radius: 1rem;
+
+            align-self: center;
+            
+            background-color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+
+            transition: background .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            
+            color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+            font-weight: 600;
+            font-size: 1.8rem;
+            font-family: 'Inter', sans-serif;
+            
+            border: 1px solid transparent;
+
+            &:hover {
+                cursor: pointer;
+                background-color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+                color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+                border: 1px solid ${ ({ theme }) => theme.COLORS.WHITE_900};
+            }
+        }
     }
 
     .planet,
@@ -806,8 +867,8 @@ export const Contact = styled.div`
     }
 `;
 
+
 export const Input = styled.div`
-    width: min(90%, 110rem);
 
     display: flex;
 
@@ -820,7 +881,7 @@ export const Input = styled.div`
 
     > input {
         width: 100%;
-        padding: rem 0;
+        padding: 1rem 0;
 
         border: none;
         background: none;
@@ -833,20 +894,5 @@ export const Input = styled.div`
         font-family: 'Roboto Serif', serif;
         font-size: 1.4rem;
         color: ${ ({ theme }) => theme.COLORS.BLACK_900};
-    }
-
-    > button {
-        background-color: ${ ({ theme }) => theme.COLORS.BLACK_900};
-
-        padding: .7rem 2.5rem;
-
-        font-family: 'Roboto Serif', serif;
-        font-size: 1.4rem;
-        font-weight: 600;
-
-        color: ${ ({ theme }) => theme.COLORS.WHITE_900};
-
-        border-radius: 2.5rem;
-        border: none;
     }
 `;
