@@ -20,6 +20,86 @@ export const Header = styled.header`
     padding: 4rem 0;
 
     font-family: 'Roboto Serif', serif;
+
+    ul {
+        display: flex;
+        gap: 2.5rem;
+
+        display: none;
+
+        li {
+            transition: transform .2s ease-in-out;
+
+            &:hover {
+                transform: translateY(-1rem);
+            }
+        }
+
+        svg {
+            color: ${ ({ theme }) => theme.COLORS.WHITE_900};
+        }
+    }
+
+    &.opened {
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+
+        animation: showMenu .5s;
+
+        justify-content: space-between;
+
+        background-color: ${ ({ theme }) => theme.COLORS.BLACK_900};
+
+        width: 100%;
+        
+        ul {
+            display: flex;
+        }
+
+        > div {
+            width: 90%;
+            justify-content: space-between;
+
+            svg {
+                display: block;
+            }
+        }
+
+        nav {
+            flex-direction: column;
+            justify-self: center;
+
+            a {
+                display: block;
+            }
+            
+            div {
+                display: block;
+            }
+
+            svg {
+                display: none;
+            }
+        }
+
+        overflow: hidden;
+
+        z-index: 999;
+    }
+
+    @keyframes showMenu {
+        from {
+            top: -100%;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+        
+    }
 `;
 
 export const Brand = styled.div`
@@ -28,6 +108,10 @@ export const Brand = styled.div`
 
     font-weight: 700;
     font-size: 2.2rem;
+
+    > svg {
+        display: none;
+    }
 `;
 
 export const Nav = styled.nav`

@@ -39,6 +39,8 @@ import {
 
 import { FlagSwitch } from "../../components/FlagSwitch";
 
+import { IoClose } from "react-icons/io5";
+
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 import { FaWhatsapp } from "react-icons/fa6";
@@ -102,6 +104,8 @@ export function Portfolio () {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+    const [sidebarIsOpened, setSidebarIsOpened] = useState(false);
+
     function sendEmail (e) {
         e.preventDefault();
 
@@ -136,11 +140,18 @@ export function Portfolio () {
 
     return (
         <Container>
-            <Header>
+            <Header className={sidebarIsOpened ? "opened" : ""}>
                 <Brand>
                     <h2>
                         &lt;&gt;carlos.&lt;/&gt;
                     </h2>
+
+                    <IoClose 
+                        size={30}
+
+                        onClick={ () => setSidebarIsOpened(false) }
+                    />
+                    
                 </Brand>
                 <Nav>
                     <a href="">{t("Home")}</a>
@@ -152,9 +163,47 @@ export function Portfolio () {
 
                     <HiOutlineMenuAlt3 
                         size={30}
+                        onClick={ () => setSidebarIsOpened(true) }
                     />
 
                 </Nav>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <FaWhatsapp 
+                                size={24}
+                            />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <MdMailOutline 
+                                size={24}
+                            />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <FaInstagram 
+                                size={24}
+                            />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <FiGithub 
+                                size={24}
+                            />
+                        </a>
+                    </li>
+
+                </ul>
+
+
             </Header>
 
             <Home>
