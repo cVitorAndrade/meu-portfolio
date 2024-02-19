@@ -1,6 +1,7 @@
 import myUnsplashImage from "../assets/my-unsplash.png";
 import chatGroup from "./assets/projects/chat-group.png";
 import myTaskBoard from "./assets/projects/my-task-board.png";
+import helpFlix from "./assets/projects/helpflix.png"
 
 import html from "./assets/techs/html.png"
 import css from "./assets/techs/css.png";
@@ -268,6 +269,47 @@ const projects = [
                     {
                         id: 44,
                         name: "sqlite"
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id: 4,
+        name: "HelpFlix",
+        description: "Can't decide what to watch? No problem, HelpFlix is here to solve that issue. It's an application that uses The Movie DB API to suggest a random movie for you.",
+        image: helpFlix,
+        design: "https://www.figma.com/file/RMiSdBpwcuOeNwmFzehw19/Rocketflix-%E2%80%A2-Desafio-Discover-(Community)?type=design&node-id=3-2&mode=design&t=m5SLJpGbMrRfqlE8-0",
+        deploy: "https://cvitorandrade.github.io/helpflix/",
+        repository: "https://github.com/cVitorAndrade/helpflix",
+        platforms: [
+            {
+                id: 5,
+                name: "Website",
+                repository: "https://github.com/cVitorAndrade/helpflix",
+                technologies: [
+                    {
+                        id: 45,
+                        name: "HTML",
+                    },
+                    {
+                        id: 46,
+                        name: "CSS",
+                    },
+                    {
+                        id: 47,
+                        name: "Javascript",
+                    },
+                ]
+            },
+            {
+                id: 6,
+                name: "API",
+                repository: "https://api.themoviedb.org/",
+                technologies: [
+                    {
+                        id: 48,
+                        name: "The Movie DB"
                     },
                 ]
             }

@@ -45,5 +45,7 @@
 
     "Everyone sends and receives text messages every day, this system consists of a chat application using sockets for real-time communication.": "Todos enviam e recebem mensagens de textos todos os dias. Esse sistema consiste em um aplicativo de chat usando sockets para uma comunicação em tempo real",
 
-    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "Esse desafio envolveu a criação de um aplicativo fullsatck de gerenciamento de de tarefas. Um sistema que permite aos usúarios gerenciar tarefas e compartilhar seu board, entre outras atividades."
+    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "Esse desafio envolveu a criação de um aplicativo fullsatck de gerenciamento de de tarefas. Um sistema que permite aos usúarios gerenciar tarefas e compartilhar seu board, entre outras atividades.",
+
+    "Can't decide what to watch? No problem, HelpFlix is here to solve that issue. It's an application that uses The Movie DB API to suggest a random movie for you.": "Não consegue decidir o que assistir? Sem problemas, o HelpFlix esta aqui para resolver esse problema. Trata-se de uma aplicação que utiliza a API do The Movie DB para sugerir um filme aleatório para você."
 }

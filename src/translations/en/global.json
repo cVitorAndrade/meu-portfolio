@@ -44,5 +44,7 @@
 
     "Everyone sends and receives text messages every day, this system consists of a chat application using sockets for real-time communication.": "Everyone sends and receives text messages every day. This system consists of a chat application using sockets for real-time communication.",
 
-    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities."
+    "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.": "This challenge involved the creation of a full-stack task management application. A system that allows users to manage tasks and share their board, among other activities.",
+
+    "Can't decide what to watch? No problem, HelpFlix is here to solve that issue. It's an application that uses The Movie DB API to suggest a random movie for you.": "Can't decide what to watch? No problem, HelpFlix is here to solve that issue. It's an application that uses The Movie DB API to suggest a random movie for you."
 }
