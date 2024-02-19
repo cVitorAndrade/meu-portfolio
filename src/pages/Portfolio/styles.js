@@ -238,7 +238,7 @@ export const ScroolDownButton = styled.div`
     display: flex;
     justify-content: center;
 
-    > a {
+    > div {
         display: flex;
         flex-direction: column;
 
@@ -246,18 +246,20 @@ export const ScroolDownButton = styled.div`
 
         color: ${ ({ theme }) => theme.COLORS.WHITE_900};
 
-        cursor: pointer;
-
-        animation: mouseDown 2s infinite;
+        animation: mouseDown 2.2s ease-in-out infinite;
     }
 
     @keyframes mouseDown {
-        from {
-            transform: translateY(-10px);
+        0% {
+            transform: translateY(0);
         }
 
-        to {
-            transform: translateY(30px);
+        50% {
+            transform: translateY(50px);
+        }
+
+        100% {
+            transform: translateY(0);
         }
     }
 

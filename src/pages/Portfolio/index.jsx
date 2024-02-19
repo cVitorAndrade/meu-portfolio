@@ -220,7 +220,7 @@ export function Portfolio () {
             </Home>
 
             <ScroolDownButton>
-                <a href="">
+                <div>
                     <MdOutlineMouse 
                         size={32}
                     />
@@ -228,7 +228,7 @@ export function Portfolio () {
                     <MdKeyboardDoubleArrowDown
                         size={32}
                     />
-                </a>
+                </div>
             </ScroolDownButton>
 
             <Title id="projects">
