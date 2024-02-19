@@ -58,8 +58,6 @@ import { RiShareBoxLine } from "react-icons/ri";
 
 import { FaGithub } from "react-icons/fa";
 
-import myUnsplash from "../../assets/my-unsplash.png";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import rocketAndPlanet from "../../assets/rocketandplanet.png";
@@ -67,31 +65,13 @@ import astronaut from "../../assets/astronaut.png";
 
 import purpleAstronaut from "../../assets/purple-astronaut.png";
 
-import html from "../../assets/techs/html.png"
-import css from "../../assets/techs/css.png";
-import js from "../../assets/techs/js.png"
-import ts from "../../assets/techs/ts.png"
-
-import reactIcon from "../../assets/techs/react.png";
-import next from "../../assets/techs/next.png";
-
-import node from "../../assets/techs/node.png";
-import express from "../../assets/techs/express.png";
-
-import knex from "../../assets/techs/knex.png";
-import postgres from "../../assets/techs/postgres.png";
-import prisma from "../../assets/techs/prisma.png";
-
-import jest from "../../assets/techs/jest.png";
-import socketIO from "../../assets/techs/socket-io.png";
-
 import planet from "../../assets/planet.png";
 import rocket from "../../assets/rocket1.png";
 
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
-import { projects } from "../../utils/data";
+import { projects, stacks } from "../../utils/data";
 
 import emailjs from "@emailjs/browser";
 
@@ -418,189 +398,44 @@ export function Portfolio () {
                     </TechsHeader>
 
                     <StackLIst>
-                        <Stack>
-                            <Tag>
-                                <h4>
-                                    Web
-                                </h4>
-                            </Tag>
 
-                            <TechsList>
-                                <TechItem>
-                                    <img src={html} alt="" />
-                                    <h4>
-                                        HTML
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
+                        {
+                            stacks && 
+                            stacks.map(stack => (
+                                <Stack
+                                    key={stack.id}
+                                >
+                                    <Tag>
+                                        <h4>
+                                            {stack.name}
+                                        </h4>
+                                    </Tag>
 
-                                <TechItem>
-                                    <img src={css} alt="" />
-                                    <h4>
-                                        CSS
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
+                                    <TechsList>
+                                        {
+                                            stack.techs &&
+                                            stack.techs.map(tech => (
+                                                <TechItem
+                                                    key={tech.id}
+                                                >
+                                                    <img src={tech.image} alt="" />
+                                                    <h4>
+                                                        {tech.name}
+                                                        {
+                                                            tech.experience && 
+                                                            <span>
+                                                                {tech.experience} {t("year experience")}
+                                                            </span>
+                                                        }
+                                                    </h4>
+                                                </TechItem>
+                                            ))
+                                        }
+                                    </TechsList>
 
-                                <TechItem>
-                                    <img src={js} alt="" />
-                                    <h4>
-                                        JavaScript
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                                <TechItem>
-                                    <img src={ts} alt="" />
-                                    <h4>
-                                        TypeScript
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-                            </TechsList>
-                        </Stack>
-
-                        <Stack>
-                            <Tag>
-                                <h4>
-                                    Frameworks
-                                </h4>
-                            </Tag>
-
-                            <TechsList>
-                                <TechItem>
-                                    <img src={reactIcon} alt="" />
-                                    <h4>
-                                        React
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                                <TechItem>
-                                    <img src={next} alt="" />
-                                    <h4>
-                                        Next.JS
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                            </TechsList>
-                        </Stack>
-
-                        <Stack>
-                            <Tag>
-                                <h4>
-                                    Server
-                                </h4>
-                            </Tag>
-
-                            <TechsList>
-
-                                <TechItem>
-                                    <img src={express} alt="" />
-                                    <h4>
-                                        Express
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-                                
-                                <TechItem>
-                                    <img src={node} alt="" />
-                                    <h4>
-                                        Node.JS
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                            </TechsList>
-                        </Stack>
-
-                        <Stack>
-                            <Tag>
-                                <h4>
-                                    Data
-                                </h4>
-                            </Tag>
-
-                            <TechsList>
-                                <TechItem>
-                                    <img src={knex} alt="" />
-                                    <h4>
-                                        Knex
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                                <TechItem>
-                                    <img src={prisma} alt="" />
-                                    <h4>
-                                        Prisma
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                                <TechItem>
-                                    <img src={postgres} alt="" />
-                                    <h4>
-                                        PostgreSQL
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                            </TechsList>
-                        </Stack>
-                        
-                        <Stack>
-                            <Tag>
-                                <h4>
-                                    Others
-                                </h4>
-                            </Tag>
-
-                            <TechsList>
-                                <TechItem>
-                                    <img src={socketIO} alt="" />
-                                    <h4>
-                                        Socket.io
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-
-                                <TechItem>
-                                    <img src={jest} alt="" />
-                                    <h4>
-                                        Jest
-                                        <span>
-                                            +1 {t("year experience")}
-                                        </span>
-                                    </h4>
-                                </TechItem>
-                            </TechsList>
-                        </Stack>
+                                </Stack>
+                            ))
+                        }
                     </StackLIst>
 
                 </TechsInfo>

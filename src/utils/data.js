@@ -2,6 +2,22 @@ import myUnsplashImage from "../assets/my-unsplash.png";
 import chatGroup from "./assets/projects/chat-group.png";
 import myTaskBoard from "./assets/projects/my-task-board.png";
 
+import html from "./assets/techs/html.png"
+import css from "./assets/techs/css.png";
+import js from "./assets/techs/js.png"
+import ts from "./assets/techs/ts.png"
+
+import reactIcon from "./assets/techs/react.png"
+
+import express from "./assets/techs/express.png"
+import nodejs from "./assets/techs/node.png"
+
+import knex from "./assets/techs/knex.png"
+import postgres from "./assets/techs/postgres.png"
+
+import socketIo from "./assets/techs/socket-io.png"
+import jest from "./assets/techs/jest.png"
+
 const projects = [
     {
         id: 1,
@@ -259,4 +275,104 @@ const projects = [
     }
 ]
 
-export { projects }
+const stacks = [
+    {
+        id: 1,
+        name: "Web",
+        techs: [
+            {
+                id: 1,
+                name: "HTML",
+                experience: "+2",
+                image: html
+            },
+            {
+                id: 2,
+                name: "CSS",
+                experience: "+2",
+                image: css
+                
+            },
+            {
+                id: 3,
+                name: "JavaScript",
+                experience: "+2",
+                image: js
+            },
+            {
+                id: 4,
+                name: "TypeScrypt",
+                experience: "+1",
+                image: ts
+            },
+        ]
+    },
+    {
+        id: 2,
+        name: "Frameworks",
+        techs: [
+            {
+                id: 5,
+                name: "React",
+                experience: "+1",
+                image: reactIcon
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Server",
+        techs: [
+            {
+                id: 6,
+                name: "Express",
+                experience: "+1",
+                image: express
+            },
+            {
+                id: 7,
+                name: "Node.JS",
+                experience: "+1",
+                image: nodejs
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Data",
+        techs: [
+            {
+                id: 8,
+                name: "Knex",
+                experience: "+1",
+                image: knex
+            },
+            {
+                id: 9,
+                name: "PostgreSQL",
+                experience: "+1",
+                image: postgres
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "Others",
+        techs: [
+            {
+                id: 10,
+                name: "Socket.io",
+                experience: "",
+                image: socketIo
+            },
+            {
+                id: 11,
+                name: "Jest",
+                experience: "",
+                image: jest
+            }
+        ]
+    },
+]
+
+export { projects, stacks }
